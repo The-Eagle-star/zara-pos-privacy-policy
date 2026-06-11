@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZaraPOS — Privacy Policy</title>
+<title>ZaraPOS — Privacy Policy & Account Deletion</title>
 <style>
   *, *::before, *::after {
     box-sizing: border-box;
@@ -30,8 +30,8 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 40px;
-    padding-bottom: 32px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
     border-bottom: 0.5px solid rgba(255,255,255,0.1);
   }
 
@@ -61,6 +61,30 @@
     font-size: 13px;
     color: #8f918b;
     margin-top: 2px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+
+  .nav a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 0.5px solid rgba(255,255,255,0.12);
+    color: #9ca09a;
+    transition: all 0.15s ease;
+  }
+
+  .nav a.active {
+    background: #86efac;
+    color: #07120a;
+    border-color: transparent;
   }
 
   .notice {
@@ -163,6 +187,18 @@
     margin-bottom: 6px;
   }
 
+  .highlight-card {
+    background: rgba(134,239,172,0.08);
+    border: 0.5px solid rgba(134,239,172,0.24);
+    border-radius: 14px;
+    padding: 18px;
+    margin: 18px 0;
+  }
+
+  .highlight-card p {
+    margin-bottom: 6px;
+  }
+
   a {
     color: #86efac;
     font-weight: 650;
@@ -171,6 +207,14 @@
 
   a:hover {
     text-decoration: underline;
+  }
+
+  .doc-panel {
+    display: none;
+  }
+
+  .doc-panel.visible {
+    display: block;
   }
 
   .footer {
@@ -211,180 +255,277 @@
     </div>
   </header>
 
+  <nav class="nav">
+    <a href="#privacy" class="active" onclick="showPanel('privacy', this); return false;">Privacy Policy</a>
+    <a href="#delete-account" onclick="showPanel('delete-account', this); return false;">Delete Account</a>
+  </nav>
+
   <div class="notice">
     <svg class="notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="10"/>
       <line x1="12" y1="8" x2="12" y2="12"/>
       <line x1="12" y1="16" x2="12.01" y2="16"/>
     </svg>
-    <p>Please read this Privacy Policy carefully before using ZaraPOS.</p>
+    <p>Please read this Privacy Policy and Account Deletion information carefully before using ZaraPOS.</p>
   </div>
 
   <main>
-    <h1 class="doc-title">Privacy Policy</h1>
-    <p class="doc-meta">Last updated: June 11, 2026 &nbsp;·&nbsp; ZaraPOS</p>
 
-    <section class="section">
-      <h2><span class="num">1</span> Introduction</h2>
-      <p>Welcome to ZaraPOS.</p>
-      <p>ZaraPOS is a Point of Sale (POS) and business management application developed by Zafrionet Ltd. This Privacy Policy explains how we collect, use, store, and protect information when you use our application and related services.</p>
-      <p>By using ZaraPOS, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
-    </section>
+    <div class="doc-panel visible" id="panel-privacy">
+      <h1 class="doc-title">Privacy Policy</h1>
+      <p class="doc-meta">Last updated: June 11, 2026 &nbsp;·&nbsp; ZaraPOS</p>
 
-    <section class="section">
-      <h2><span class="num">2</span> Information We Collect</h2>
+      <section class="section">
+        <h2><span class="num">1</span> Introduction</h2>
+        <p>Welcome to ZaraPOS.</p>
+        <p>ZaraPOS is a Point of Sale (POS) and business management application. This Privacy Policy explains how we collect, use, store, and protect information when you use our application and related services.</p>
+        <p>By using ZaraPOS, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+      </section>
 
-      <div class="subheading">Account Information</div>
-      <p>When creating an account, we may collect:</p>
-      <ul>
-        <li>Full name</li>
-        <li>Email address</li>
-        <li>Phone number</li>
-        <li>Authentication credentials</li>
-        <li>Business profile information</li>
-      </ul>
+      <section class="section">
+        <h2><span class="num">2</span> Information We Collect</h2>
 
-      <div class="subheading">Business Data</div>
-      <p>ZaraPOS allows businesses to manage operations and may collect:</p>
-      <ul>
-        <li>Product and inventory records</li>
-        <li>Sales transactions</li>
-        <li>Purchase transactions</li>
-        <li>Supplier information</li>
-        <li>Customer information</li>
-        <li>Receipts and invoices</li>
-        <li>Employee information</li>
-        <li>Business reports and analytics</li>
-      </ul>
+        <div class="subheading">Account Information</div>
+        <p>When creating an account, we may collect:</p>
+        <ul>
+          <li>Full name</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Authentication credentials</li>
+          <li>Business profile information</li>
+        </ul>
 
-      <div class="subheading">Customer Information</div>
-      <p>Information entered by businesses may include:</p>
-      <ul>
-        <li>Customer names</li>
-        <li>Phone numbers</li>
-        <li>Email addresses</li>
-        <li>Purchase history</li>
-        <li>Loyalty information</li>
-      </ul>
+        <div class="subheading">Business Data</div>
+        <p>ZaraPOS allows businesses to manage operations and may collect:</p>
+        <ul>
+          <li>Product and inventory records</li>
+          <li>Sales transactions</li>
+          <li>Purchase transactions</li>
+          <li>Supplier information</li>
+          <li>Customer information</li>
+          <li>Receipts and invoices</li>
+          <li>Employee information</li>
+          <li>Business reports and analytics</li>
+        </ul>
 
-      <div class="subheading">Device and Technical Information</div>
-      <p>We automatically collect certain technical information, including:</p>
-      <ul>
-        <li>Device type</li>
-        <li>Device identifiers</li>
-        <li>Operating system version</li>
-        <li>App version</li>
-        <li>IP address</li>
-        <li>Crash logs</li>
-        <li>Performance diagnostics</li>
-      </ul>
+        <div class="subheading">Customer Information</div>
+        <p>Information entered by businesses may include:</p>
+        <ul>
+          <li>Customer names</li>
+          <li>Phone numbers</li>
+          <li>Email addresses</li>
+          <li>Purchase history</li>
+          <li>Loyalty information</li>
+        </ul>
 
-      <div class="subheading">Analytics Data</div>
-      <p>We use analytics services to understand how ZaraPOS is used, including feature access, session duration, user engagement metrics, and error reports.</p>
-    </section>
+        <div class="subheading">Device and Technical Information</div>
+        <p>We automatically collect certain technical information, including:</p>
+        <ul>
+          <li>Device type</li>
+          <li>Device identifiers</li>
+          <li>Operating system version</li>
+          <li>App version</li>
+          <li>IP address</li>
+          <li>Crash logs</li>
+          <li>Performance diagnostics</li>
+        </ul>
 
-    <section class="section">
-      <h2><span class="num">3</span> How We Use Information</h2>
-      <p>We use collected information to:</p>
-      <ul>
-        <li>Create and manage user accounts</li>
-        <li>Process sales and transactions</li>
-        <li>Manage inventory and business operations</li>
-        <li>Generate reports and analytics</li>
-        <li>Improve application functionality</li>
-        <li>Provide customer support</li>
-        <li>Detect fraud, abuse, and security incidents</li>
-        <li>Comply with legal and regulatory obligations</li>
-      </ul>
-    </section>
+        <div class="subheading">Analytics Data</div>
+        <p>We use analytics services to understand how ZaraPOS is used, including feature access, session duration, user engagement metrics, and error reports.</p>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">4</span> Firebase Services</h2>
-      <p>ZaraPOS uses services provided by Google Firebase, including:</p>
+      <section class="section">
+        <h2><span class="num">3</span> How We Use Information</h2>
+        <p>We use collected information to:</p>
+        <ul>
+          <li>Create and manage user accounts</li>
+          <li>Process sales and transactions</li>
+          <li>Manage inventory and business operations</li>
+          <li>Generate reports and analytics</li>
+          <li>Improve application functionality</li>
+          <li>Provide customer support</li>
+          <li>Detect fraud, abuse, and security incidents</li>
+          <li>Comply with legal and regulatory obligations</li>
+        </ul>
+      </section>
 
-      <div class="subheading">Firebase Authentication</div>
-      <p>Used for secure user login and account management.</p>
+      <section class="section">
+        <h2><span class="num">4</span> Firebase Services</h2>
+        <p>ZaraPOS uses services provided by Google Firebase, including:</p>
 
-      <div class="subheading">Cloud Firestore / Firebase Database</div>
-      <p>Used to securely store business, inventory, customer, supplier, and transaction data.</p>
+        <div class="subheading">Firebase Authentication</div>
+        <p>Used for secure user login and account management.</p>
 
-      <div class="subheading">Firebase Analytics</div>
-      <p>Used to understand app usage and improve user experience.</p>
+        <div class="subheading">Cloud Firestore / Firebase Database</div>
+        <p>Used to securely store business, inventory, customer, supplier, and transaction data.</p>
 
-      <div class="subheading">Firebase Crashlytics</div>
-      <p>Used to monitor crashes and application performance issues.</p>
+        <div class="subheading">Firebase Analytics</div>
+        <p>Used to understand app usage and improve user experience.</p>
 
-      <p>Google may process certain technical information in accordance with its own Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-    </section>
+        <div class="subheading">Firebase Crashlytics</div>
+        <p>Used to monitor crashes and application performance issues.</p>
 
-    <section class="section">
-      <h2><span class="num">5</span> Data Storage</h2>
-      <p>Business and user data is stored securely using Firebase cloud infrastructure.</p>
-      <p>Data may be stored and processed on servers located outside your country of residence. By using ZaraPOS, you consent to such storage and processing.</p>
-    </section>
+        <p>Google may process certain technical information in accordance with its own Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">6</span> Data Sharing</h2>
-      <p>We do not sell personal information.</p>
-      <p>We may share information only in the following situations:</p>
-      <ul>
-        <li>With Firebase and Google Cloud services required to operate the application</li>
-        <li>With service providers acting on our behalf</li>
-        <li>When required by law or legal process</li>
-        <li>To protect our legal rights and prevent fraud or security threats</li>
-      </ul>
-    </section>
+      <section class="section">
+        <h2><span class="num">5</span> Data Storage</h2>
+        <p>Business and user data is stored securely using Firebase cloud infrastructure.</p>
+        <p>Data may be stored and processed on servers located outside your country of residence. By using ZaraPOS, you consent to such storage and processing.</p>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">7</span> Data Security</h2>
-      <p>We implement reasonable administrative, technical, and organizational safeguards designed to protect information from unauthorized access, disclosure, modification, and destruction.</p>
-      <p>Despite our efforts, no internet-based system can guarantee absolute security.</p>
-    </section>
+      <section class="section">
+        <h2><span class="num">6</span> Data Sharing</h2>
+        <p>We do not sell personal information.</p>
+        <p>We may share information only in the following situations:</p>
+        <ul>
+          <li>With Firebase and Google Cloud services required to operate the application</li>
+          <li>With service providers acting on our behalf</li>
+          <li>When required by law or legal process</li>
+          <li>To protect our legal rights and prevent fraud or security threats</li>
+        </ul>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">8</span> Data Retention</h2>
-      <p>We retain data for as long as necessary to provide ZaraPOS services, maintain business records, and meet legal, accounting, and regulatory requirements.</p>
-      <p>Users may request account deletion subject to applicable legal obligations.</p>
-    </section>
+      <section class="section">
+        <h2><span class="num">7</span> Data Security</h2>
+        <p>We implement reasonable administrative, technical, and organizational safeguards designed to protect information from unauthorized access, disclosure, modification, and destruction.</p>
+        <p>Despite our efforts, no internet-based system can guarantee absolute security.</p>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">9</span> User Rights</h2>
-      <p>Depending on applicable laws, users may have the right to:</p>
-      <ul>
-        <li>Access their data</li>
-        <li>Correct inaccurate information</li>
-        <li>Request deletion of data</li>
-        <li>Request data export</li>
-        <li>Withdraw consent where applicable</li>
-      </ul>
-      <p>Requests may be submitted using the contact information below.</p>
-    </section>
+      <section class="section">
+        <h2><span class="num">8</span> Data Retention</h2>
+        <p>We retain data for as long as necessary to provide ZaraPOS services, maintain business records, and meet legal, accounting, and regulatory requirements.</p>
+        <p>Users may request account deletion subject to applicable legal obligations.</p>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">10</span> Children's Privacy</h2>
-      <p>ZaraPOS is intended for business use and is not directed toward children under the age of 13.</p>
-      <p>We do not knowingly collect information from children.</p>
-    </section>
+      <section class="section">
+        <h2><span class="num">9</span> User Rights</h2>
+        <p>Depending on applicable laws, users may have the right to:</p>
+        <ul>
+          <li>Access their data</li>
+          <li>Correct inaccurate information</li>
+          <li>Request deletion of data</li>
+          <li>Request data export</li>
+          <li>Withdraw consent where applicable</li>
+        </ul>
+        <p>Requests may be submitted using the contact information below or through the Delete Account section on this page.</p>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">11</span> Changes to This Privacy Policy</h2>
-      <p>We may update this Privacy Policy periodically.</p>
-      <p>Any changes will be posted within the application and/or on our website. Continued use of ZaraPOS after changes become effective constitutes acceptance of the revised policy.</p>
-    </section>
+      <section class="section">
+        <h2><span class="num">10</span> Children's Privacy</h2>
+        <p>ZaraPOS is intended for business use and is not directed toward children under the age of 13.</p>
+        <p>We do not knowingly collect information from children.</p>
+      </section>
 
-    <section class="section">
-      <h2><span class="num">12</span> Contact Information</h2>
-      <p>For questions regarding this Privacy Policy or your personal information, contact:</p>
-      <p><strong>ZaraPOS</strong><br>
-      Email: <a href="mailto:mutesimugwaneza@gmail.com">mutesimugwaneza@gmail.com</a><br>
-      Location: Kigali, Rwanda</p>
-    </section>
+      <section class="section">
+        <h2><span class="num">11</span> Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy periodically.</p>
+        <p>Any changes will be posted within the application and/or on our website. Continued use of ZaraPOS after changes become effective constitutes acceptance of the revised policy.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="num">12</span> Contact Information</h2>
+        <p>For questions regarding this Privacy Policy, account deletion, or your personal information, contact:</p>
+        <p><strong>ZaraPOS</strong><br>
+        Email: <a href="mailto:mutesimugwaneza@gmail.com">mutesimugwaneza@gmail.com</a><br>
+        Location: Kigali, Rwanda</p>
+      </section>
+    </div>
+
+    <div class="doc-panel" id="panel-delete-account">
+      <h1 class="doc-title">Account &amp; Data Deletion</h1>
+      <p class="doc-meta">Last updated: June 11, 2026 &nbsp;·&nbsp; ZaraPOS</p>
+
+      <section class="section">
+        <h2><span class="num">1</span> Request Account Deletion</h2>
+        <p>You may request deletion of your ZaraPOS account and associated data at any time.</p>
+
+        <div class="highlight-card">
+          <p><strong>Email:</strong> <a href="mailto:mutesimugwaneza@gmail.com">mutesimugwaneza@gmail.com</a></p>
+          <p><strong>Subject:</strong> Delete ZaraPOS Account</p>
+          <p><strong>Include:</strong> The email address or phone number linked to your ZaraPOS account.</p>
+        </div>
+
+        <p>After receiving your request, we may contact you to verify account ownership before deleting your account and associated data.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="num">2</span> Data That Will Be Deleted</h2>
+        <p>When your account deletion request is verified, we will delete data associated with your ZaraPOS account, including:</p>
+        <ul>
+          <li>User account information</li>
+          <li>Business profile information</li>
+          <li>Inventory and product records</li>
+          <li>Customer records</li>
+          <li>Supplier records</li>
+          <li>Sales transactions</li>
+          <li>Purchase records</li>
+          <li>Receipts and invoices</li>
+          <li>Employee records associated with the account</li>
+          <li>Application data linked to your account</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="num">3</span> Data That May Be Retained</h2>
+        <p>Some information may be retained where necessary for legal, accounting, tax, fraud prevention, dispute resolution, security, or regulatory compliance purposes.</p>
+        <p>Backup copies may also remain in secure backup systems for a limited period before being automatically deleted.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="num">4</span> Retention Period</h2>
+        <p>Verified account deletion requests are typically processed within 30 days of receipt.</p>
+        <p>Data stored in backups may be retained for up to 90 days before automatic deletion, unless a longer retention period is required by law.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="num">5</span> Delete Some Data Without Deleting Your Account</h2>
+        <p>Users may request deletion of certain data without deleting their ZaraPOS account, such as customer records, product records, supplier records, or transaction-related data, where legally allowed.</p>
+        <p>To request partial data deletion, email <a href="mailto:mutesimugwaneza@gmail.com">mutesimugwaneza@gmail.com</a> with the subject <strong>Delete ZaraPOS Data</strong> and describe the specific data you want deleted.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="num">6</span> Contact</h2>
+        <p>For account deletion, data deletion, or privacy questions, contact:</p>
+        <p><strong>ZaraPOS</strong><br>
+        Email: <a href="mailto:mutesimugwaneza@gmail.com">mutesimugwaneza@gmail.com</a><br>
+        Location: Kigali, Rwanda</p>
+      </section>
+    </div>
+
   </main>
 
   <footer class="footer">
-    <p>ZaraPOS &nbsp;·&nbsp; ZaraPOS &nbsp;·&nbsp; <a href="mailto:mutesimugwaneza@gmail.com">mutesimugwaneza@gmail.com</a></p>
+    <p>ZaraPOS &nbsp;·&nbsp; <a href="mailto:mutesimugwaneza@gmail.com">mutesimugwaneza@gmail.com</a></p>
   </footer>
 
 </div>
+
+<script>
+  function showPanel(panel, el) {
+    document.querySelectorAll('.doc-panel').forEach(function(item) {
+      item.classList.remove('visible');
+    });
+
+    document.querySelectorAll('.nav a').forEach(function(link) {
+      link.classList.remove('active');
+    });
+
+    document.getElementById('panel-' + panel).classList.add('visible');
+    el.classList.add('active');
+
+    if (history.pushState) {
+      history.pushState(null, '', '#' + panel);
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'delete-account') {
+      const deleteLink = document.querySelector('.nav a[href="#delete-account"]');
+      showPanel('delete-account', deleteLink);
+    }
+  });
+</script>
 </body>
 </html>
